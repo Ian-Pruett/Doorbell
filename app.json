@@ -1,0 +1,8 @@
+{
+    "name": "Doorbell-Chatbot",
+    "description": "Simple IoT doorbell with esp8266 and messenger chatbot",
+    "image": "heroku/python",
+    "repository": "https://github.com/Ian-Pruett/Doorbell",
+    "keywords": ["python"]
+}
+  
