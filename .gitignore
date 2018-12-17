@@ -5,4 +5,5 @@
 !.vscode/extensions.json
 
 *.db
+*.sh
 user_credentials.py
