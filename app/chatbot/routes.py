@@ -9,8 +9,8 @@ notify = Blueprint('notify', __name__)
 @notify.route('/notify', methods=['POST'])
 def alert():
     content = request.get_json()
-    password = content['BotEmail']
-    email = content['BotPassword']
+    email = content['BotEmail']
+    password = content['BotPassword']
     bot = NotifyBot(email, password)
     bot.ring()
     return jsonify({'status': 1}), 200

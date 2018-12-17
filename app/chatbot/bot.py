@@ -6,6 +6,6 @@ class NotifyBot(Client):
     def ring(self):
         users = self.fetchAllUsers()
         for user in users:
-            self.sendMessage(Message('someone is at the door'), 
-                thread_id=user.uid, thread_type=ThreadType.USER)
+            msg = 'someone is at the door'
+            self.sendMessage(msg, thread_id=user.uid, thread_type=ThreadType.USER)
         self.logout()
