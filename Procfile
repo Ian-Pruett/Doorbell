@@ -1,2 +1,2 @@
 web: gunicorn app:app
-init: python main.py
+init: python3 main.py
