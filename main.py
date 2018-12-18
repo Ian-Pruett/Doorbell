@@ -1,13 +1,25 @@
 from machine import Pin
 import time
 
-def btn_led_event(p):
-    print('value of button is ', p)
-    D1.on()
-    time.sleep(1)
-    D1.off()
 
-D1 = Pin(5, Pin.OUT)
-D2 = Pin(4, Pin.IN)
+# read wifi connection password stored locally
+def read_file(filename):
+    import uio
+    file = uio.open(filename, 'r')
+    lines = file.readlines()
+    file.close()
+    for i in range(len(lines)):
+        lines[i] = lines[i].replace('\n', '')
+    return lines
 
-D2.irq(trigger=Pin.IRQ_FALLING, handler=btn_led_event)
+
+# method to connect to wifi network
+def do_connect(ssid, password):
+    import network
+    sta_if = network.WLAN(network.STA_IF)
+    if not sta_if.isconnected():
+        sta_if.active(True)
+        sta_if.connect(ssid, password)
+        while not sta_if.isconnected():
+            pass
+    print('SUCCESS, network config:', sta_if.ifconfig())
