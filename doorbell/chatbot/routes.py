@@ -1,6 +1,6 @@
 from flask import request, jsonify, Blueprint
 from flask_cors import CORS
-from app.chatbot.bot import NotifyBot
+from doorbell.chatbot.bot import NotifyBot
 
 
 notify = Blueprint('notify', __name__)
