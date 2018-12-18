@@ -1,4 +1,4 @@
 flask
 flask-cors
-gunicorn
+gunicorn==19.7.1
 fbchat
