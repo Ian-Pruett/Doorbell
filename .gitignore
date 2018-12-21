@@ -1,3 +1,5 @@
+/.vscode
+/__pycache__
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -6,4 +8,6 @@
 
 *.db
 *.sh
-user_credentials.py
+credentials.txt
+wifi_info.txt
+/venv
