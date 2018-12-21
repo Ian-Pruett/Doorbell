@@ -1,2 +1,4 @@
+import os
+
 class DefaultConfig:
-    pass
+    SECRET_KEY = os.environ.get('SECRET_KEY')
